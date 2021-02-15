@@ -14,7 +14,7 @@ app.use(require('cors')());
 const io = require("socket.io")(server, {
   cors: {
     origin: "https://hexapi.tech/",
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["my-custom-header"],
     credentials: true
   }
