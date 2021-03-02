@@ -12,6 +12,8 @@ const server = http.createServer(app);
 app.use(require('cors')());
 
 const io = require("socket.io")(server, {
+  pingInterval: 250,
+  pingTimeout: 250,
   cors: {
     origin: "https://hexapi.tech",
     //methods: ["GET", "POST", "PUT", "DELETE"],
